@@ -1,7 +1,6 @@
-<<<<<<< HEAD
+
 package IR;
-=======
->>>>>>> branch 'master' of https://github.com/Frontlinjen/PacketParser.git
+
 
 public class NP2HexaDecimal {
 	private char s1, s2;
