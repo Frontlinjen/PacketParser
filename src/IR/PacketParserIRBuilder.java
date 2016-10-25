@@ -81,7 +81,18 @@ public class PacketParserIRBuilder implements NetworkParser2Visitor<IR> {
 
 	@Override
 	public IR visitFile(FileContext ctx) {
-		// TODO Auto-generated method stub
+		List<PacketContext> packages = ctx.packet();
+		for (PacketContext packet : packages) {
+			IPv4Packet newPacket = new IPv4Packet();
+			newPacket.header.date = (Date) visitDate(packet.datestamp);
+			newPacket.header.timestamp = (Timestamp) visitTime(packet.timestamp);
+			newPacket.header.sender = (MacAddress) visitMac(packet.sourceMac);
+			newPacket.header.reciever = (MacAddress) visitMac(packet.destinationMac);
+			newPacket.header.type = (EtherType) visitType(packet.ethertype);
+			newPacket.header.contentLength = Integer.parseInt(packet.totalLength.getText());
+			newPacket.content = (HeaderContent) visitIpv4content(packet.content);
+			
+		}
 		return null;
 	}
 
@@ -117,8 +128,7 @@ public class PacketParserIRBuilder implements NetworkParser2Visitor<IR> {
 
 	@Override
 	public IR visitIpv4content(Ipv4contentContext ctx) {
-		// TODO Auto-generated method stub
-		return null;
+		
 	}
 
 	@Override

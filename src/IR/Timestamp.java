@@ -1,6 +1,6 @@
 package IR;
 
-public class Timestamp {
+public class Timestamp extends IR {
 
 	private int hour;
 	private int minutes;

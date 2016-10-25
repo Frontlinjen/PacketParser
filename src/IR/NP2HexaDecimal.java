@@ -1,5 +1,5 @@
 package IR;
-public class NP2HexaDecimal {
+public class NP2HexaDecimal extends IR {
 	private char[] c;
 
 	public NP2HexaDecimal(char[] c) throws IllegalArgumentException{

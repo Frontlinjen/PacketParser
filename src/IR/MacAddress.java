@@ -1,6 +1,6 @@
 package IR;
 
-public class MacAddress {
+public class MacAddress extends IR {
 
 	private NP2HexaDecimal[] arr = new NP2HexaDecimal[6];
 	
