@@ -2,9 +2,10 @@ package IR;
 
 public class MacAddress {
 
-	private Hexa[] arr;
+	private NP2HexaDecimal[] arr = new NP2HexaDecimal[6];
 	
-	public MacAddress(Hexa a,Hexa b,Hexa c,Hexa d,Hexa e,Hexa f){
+	public MacAddress(NP2HexaDecimal a,NP2HexaDecimal b,NP2HexaDecimal c,
+						NP2HexaDecimal d,NP2HexaDecimal e,NP2HexaDecimal f){
 		arr[0] = a;
 		arr[1] = b;
 		arr[2] = c;
@@ -15,7 +16,7 @@ public class MacAddress {
 	public MacAddress(String st){
 		String[] MacAdd = st.split(":");
 			for(int i=0; i<MacAdd.length; i++){
-				arr[i] = Integer.parseInt(ip[i]);
+				arr[i] = new NP2HexaDecimal(st);
 			}
 	}
 }
