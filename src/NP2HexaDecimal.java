@@ -2,9 +2,15 @@
 public class NP2HexaDecimal {
 	private char s1, s2;
 
-	public NP2HexaDecimal(char s1, char s2){
+	public NP2HexaDecimal(char s1, char s2) throws IllegalArgumentException{
 		this.s1 = s1;
 		this.s2 = s2;
+		if(isValidHexa(s1)){
+			throw new IllegalArgumentException("You dun fucked it up");
+		}
+		if(isValidHexa(s1)){
+			throw new IllegalArgumentException("You dun fucked it up");
+		}
 	}
 	
 	private boolean isValidHexa(char c)
