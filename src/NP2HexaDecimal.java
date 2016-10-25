@@ -1,15 +1,13 @@
 
 public class NP2HexaDecimal {
-	private char s1, s2;
+	private char[] c;
 
-	public NP2HexaDecimal(char s1, char s2) throws IllegalArgumentException{
-		this.s1 = s1;
-		this.s2 = s2;
-		if(isValidHexa(s1)){
-			throw new IllegalArgumentException("You dun fucked it up");
-		}
-		if(isValidHexa(s1)){
-			throw new IllegalArgumentException("You dun fucked it up");
+	public NP2HexaDecimal(char[] c) throws IllegalArgumentException{
+		this.c = c;
+		for (char d : c) {
+			if(isValidHexa(d)){
+				throw new IllegalArgumentException("You dun fucked it up");
+			}
 		}
 	}
 	
@@ -18,29 +16,20 @@ public class NP2HexaDecimal {
 		c = Character.toLowerCase(c);
 		return (c >= 'a' && c <= 'f') || Character.isDigit(c);
 	}
-	public NP2HexaDecimal(String s){
-		this.s1 = s.charAt(0);
-		this.s1 = s.charAt(1);
-	}
 	
 	public String getHexaDecimal(){
-		return new String(new char[] {s1, s2}, 0, 2);
+		return new String(c);
 	}
 	public int getDecimalValue(){
-		int first = 0;
-		int second = 0;
-		if(Character.isAlphabetic(s1)){
-			first = (int) ((Character.toUpperCase(s1)-31)*Math.pow(16, 0));
+		int result = 0;
+		for (int i = 0; i < c.length; i++) {
+			if(Character.isAlphabetic(c[i])){
+				result += (int) ((Character.toUpperCase(c[i])-31)*Math.pow(16, i));
+			}
+			else{
+				result += (int) (c[i]*Math.pow(16, i));
+			}
 		}
-		else{
-			first = (int) (s1*Math.pow(16, 0));
-		}
-		if(Character.isAlphabetic(s2)){
-			second = (int) ((Character.toUpperCase(s2)-31)*Math.pow(16, 1));
-		}
-		else{
-			second = (int) (s2*Math.pow(16, 0));
-		}
-		return first + second;
+		return result;
 	}
 }
