@@ -39,3 +39,4 @@ public class NP2HexaDecimal {
 		return first + second;
 	}
 }
+
