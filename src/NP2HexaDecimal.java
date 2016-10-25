@@ -21,8 +21,20 @@ public class NP2HexaDecimal {
 		return new String(new char[] {s1, s2}, 0, 2);
 	}
 	public int getDecimalValue(){
-		int first = (int) (s1*Math.pow(16, 0));
-		int second = (int) (s1*Math.pow(16, 1));
+		int first = 0;
+		int second = 0;
+		if(Character.isAlphabetic(s1)){
+			first = (int) ((Character.toUpperCase(s1)-31)*Math.pow(16, 0));
+		}
+		else{
+			first = (int) (s1*Math.pow(16, 0));
+		}
+		if(Character.isAlphabetic(s2)){
+			second = (int) ((Character.toUpperCase(s2)-31)*Math.pow(16, 1));
+		}
+		else{
+			second = (int) (s2*Math.pow(16, 0));
+		}
 		return first + second;
 	}
 }
