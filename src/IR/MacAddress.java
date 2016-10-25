@@ -16,7 +16,7 @@ public class MacAddress {
 	public MacAddress(String st){
 		String[] MacAdd = st.split(":");
 			for(int i=0; i<MacAdd.length; i++){
-				arr[i] = Integer.parseInt(MacAdd[i]);
+				arr[i] = NP2HexaDecimal.parseHexatoMacAdd(MacAdd[i]);
 			}
 	}
 }
