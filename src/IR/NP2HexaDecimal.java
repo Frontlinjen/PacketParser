@@ -1,5 +1,4 @@
 package IR;
-
 public class NP2HexaDecimal {
 	private char[] c;
 
