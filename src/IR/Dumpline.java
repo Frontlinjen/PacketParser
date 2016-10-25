@@ -1,6 +1,6 @@
 package IR;
 
-public class Dumpline {
+public class Dumpline extends IR {
 
 	String content;
 	

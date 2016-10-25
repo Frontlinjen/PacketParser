@@ -1,6 +1,6 @@
 package IR;
 
-public class IPv4 {
+public class IPv4 extends IR{
 	
 	private int[] arr; 
 	

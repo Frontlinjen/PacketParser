@@ -1,6 +1,6 @@
 package IR;
 
-public class EtherType {
+public class EtherType  extends IR{
 	
 	private NP2HexaDecimal hd;
 	

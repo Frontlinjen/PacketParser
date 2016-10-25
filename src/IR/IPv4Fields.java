@@ -1,6 +1,6 @@
 package IR;
 
-public class IPv4Fields {
+public class IPv4Fields extends IR{
 	NP2HexaDecimal tos;
 	int ttl;
 	int id;

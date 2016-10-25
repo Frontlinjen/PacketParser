@@ -1,6 +1,6 @@
 package IR;
 
-public class Header {
+public class Header extends IR{
 	Timestamp timestamp;
 	Date date;
 	MacAddress sender;
