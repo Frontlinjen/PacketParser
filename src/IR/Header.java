@@ -1,5 +1,4 @@
-package IR;
-
+package IR
 public class Header extends IR{
 	Timestamp timestamp;
 	Date date;

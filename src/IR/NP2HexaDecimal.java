@@ -22,7 +22,7 @@ public class NP2HexaDecimal {
 	}
 	public int getDecimalValue(){
 		int result = 0;
-		for (int i = 0; i < c.length; i++) {
+		for (int i = c.length-1; i > 0; i--) {
 			if(Character.isAlphabetic(c[i])){
 				result += (int) ((Character.toUpperCase(c[i])-31)*Math.pow(16, i));
 			}

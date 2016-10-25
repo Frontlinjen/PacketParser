@@ -1,3 +1,4 @@
+
 package IR;
 import java.util.List;
 
@@ -37,109 +38,104 @@ public class PacketParserIRBuilder implements NetworkParser2Visitor<IR> {
 	}
 
 	@Override
-	public IR visitDate(Frontend.NetworkParser2Parser.DateContext ctx) {
+	public IR visitDate(DateContext ctx) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public IR visitIpv4flags(Frontend.NetworkParser2Parser.Ipv4flagsContext ctx) {
+	public IR visitIpv4flags(Ipv4flagsContext ctx) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public IR visitDumpline(Frontend.NetworkParser2Parser.DumplineContext ctx) {
+	public IR visitDumpline(DumplineContext ctx) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public IR visitPacket(Frontend.NetworkParser2Parser.PacketContext ctx) {
+	public IR visitPacket(PacketContext ctx) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public IR visitType(Frontend.NetworkParser2Parser.TypeContext ctx) {
+	public IR visitType(TypeContext ctx) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public IR visitMac(Frontend.NetworkParser2Parser.MacContext ctx) {
+	public IR visitMac(MacContext ctx) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public IR visitProtinfo(Frontend.NetworkParser2Parser.ProtinfoContext ctx) {
+	public IR visitProtinfo(ProtinfoContext ctx) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public IR visitFile(Frontend.NetworkParser2Parser.FileContext ctx) {
-		List<PacketContext> packages = ctx.packet();
-		for (PacketContext packetContext : packages) {
-			
-		}
-	}
-
-	@Override
-	public IR visitIpv4proto(Frontend.NetworkParser2Parser.Ipv4protoContext ctx) {
+	public IR visitFile(FileContext ctx) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public IR visitIpv4(Frontend.NetworkParser2Parser.Ipv4Context ctx) {
+	public IR visitIpv4proto(Ipv4protoContext ctx) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public IR visitFlagvalues(Frontend.NetworkParser2Parser.FlagvaluesContext ctx) {
+	public IR visitIpv4(Ipv4Context ctx) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public IR visitIpv4tos(Frontend.NetworkParser2Parser.Ipv4tosContext ctx) {
+	public IR visitFlagvalues(FlagvaluesContext ctx) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public IR visitProtname(Frontend.NetworkParser2Parser.ProtnameContext ctx) {
+	public IR visitIpv4tos(Ipv4tosContext ctx) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public IR visitIpv4content(Frontend.NetworkParser2Parser.Ipv4contentContext ctx) {
+	public IR visitProtname(ProtnameContext ctx) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public IR visitIpv4fields(Frontend.NetworkParser2Parser.Ipv4fieldsContext ctx) {
+	public IR visitIpv4content(Ipv4contentContext ctx) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public IR visitTime(Frontend.NetworkParser2Parser.TimeContext ctx) {
+	public IR visitIpv4fields(Ipv4fieldsContext ctx) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public IR visitTag(Frontend.NetworkParser2Parser.TagContext ctx) {
+	public IR visitTime(TimeContext ctx) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
-	
-
+	@Override
+	public IR visitTag(TagContext ctx) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }
