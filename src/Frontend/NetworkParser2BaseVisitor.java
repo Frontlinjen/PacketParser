@@ -1,5 +1,5 @@
-package Frontend;
 // Generated from C:\Users\Hjorthen\NetworkParser2.g4 by ANTLR 4.1
+package Frontend;
 import org.antlr.v4.runtime.misc.NotNull;
 import org.antlr.v4.runtime.tree.AbstractParseTreeVisitor;
 
@@ -26,7 +26,7 @@ public class NetworkParser2BaseVisitor<T> extends AbstractParseTreeVisitor<T> im
 	 * The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.
 	 */
-	@Override public T visitAddress(@NotNull NetworkParser2Parser.AddressContext ctx) { return visitChildren(ctx); }
+	@Override public T visitIpv4flags(@NotNull NetworkParser2Parser.Ipv4flagsContext ctx) { return visitChildren(ctx); }
 
 	/**
 	 * {@inheritDoc}
@@ -34,7 +34,7 @@ public class NetworkParser2BaseVisitor<T> extends AbstractParseTreeVisitor<T> im
 	 * The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.
 	 */
-	@Override public T visitIp(@NotNull NetworkParser2Parser.IpContext ctx) { return visitChildren(ctx); }
+	@Override public T visitDumpline(@NotNull NetworkParser2Parser.DumplineContext ctx) { return visitChildren(ctx); }
 
 	/**
 	 * {@inheritDoc}
@@ -42,7 +42,7 @@ public class NetworkParser2BaseVisitor<T> extends AbstractParseTreeVisitor<T> im
 	 * The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.
 	 */
-	@Override public T visitHeader(@NotNull NetworkParser2Parser.HeaderContext ctx) { return visitChildren(ctx); }
+	@Override public T visitPacket(@NotNull NetworkParser2Parser.PacketContext ctx) { return visitChildren(ctx); }
 
 	/**
 	 * {@inheritDoc}
@@ -50,47 +50,7 @@ public class NetworkParser2BaseVisitor<T> extends AbstractParseTreeVisitor<T> im
 	 * The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.
 	 */
-	@Override public T visitHex(@NotNull NetworkParser2Parser.HexContext ctx) { return visitChildren(ctx); }
-
-	/**
-	 * {@inheritDoc}
-	 * <p/>
-	 * The default implementation returns the result of calling
-	 * {@link #visitChildren} on {@code ctx}.
-	 */
-	@Override public T visitBodyContent(@NotNull NetworkParser2Parser.BodyContentContext ctx) { return visitChildren(ctx); }
-
-	/**
-	 * {@inheritDoc}
-	 * <p/>
-	 * The default implementation returns the result of calling
-	 * {@link #visitChildren} on {@code ctx}.
-	 */
-	@Override public T visitProgram(@NotNull NetworkParser2Parser.ProgramContext ctx) { return visitChildren(ctx); }
-
-	/**
-	 * {@inheritDoc}
-	 * <p/>
-	 * The default implementation returns the result of calling
-	 * {@link #visitChildren} on {@code ctx}.
-	 */
-	@Override public T visitOptionsheader(@NotNull NetworkParser2Parser.OptionsheaderContext ctx) { return visitChildren(ctx); }
-
-	/**
-	 * {@inheritDoc}
-	 * <p/>
-	 * The default implementation returns the result of calling
-	 * {@link #visitChildren} on {@code ctx}.
-	 */
-	@Override public T visitBody(@NotNull NetworkParser2Parser.BodyContext ctx) { return visitChildren(ctx); }
-
-	/**
-	 * {@inheritDoc}
-	 * <p/>
-	 * The default implementation returns the result of calling
-	 * {@link #visitChildren} on {@code ctx}.
-	 */
-	@Override public T visitWord(@NotNull NetworkParser2Parser.WordContext ctx) { return visitChildren(ctx); }
+	@Override public T visitType(@NotNull NetworkParser2Parser.TypeContext ctx) { return visitChildren(ctx); }
 
 	/**
 	 * {@inheritDoc}
@@ -106,5 +66,85 @@ public class NetworkParser2BaseVisitor<T> extends AbstractParseTreeVisitor<T> im
 	 * The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.
 	 */
-	@Override public T visitTimestamp(@NotNull NetworkParser2Parser.TimestampContext ctx) { return visitChildren(ctx); }
+	@Override public T visitProtinfo(@NotNull NetworkParser2Parser.ProtinfoContext ctx) { return visitChildren(ctx); }
+
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.
+	 */
+	@Override public T visitFile(@NotNull NetworkParser2Parser.FileContext ctx) { return visitChildren(ctx); }
+
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.
+	 */
+	@Override public T visitIpv4proto(@NotNull NetworkParser2Parser.Ipv4protoContext ctx) { return visitChildren(ctx); }
+
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.
+	 */
+	@Override public T visitIpv4(@NotNull NetworkParser2Parser.Ipv4Context ctx) { return visitChildren(ctx); }
+
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.
+	 */
+	@Override public T visitFlagvalues(@NotNull NetworkParser2Parser.FlagvaluesContext ctx) { return visitChildren(ctx); }
+
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.
+	 */
+	@Override public T visitIpv4tos(@NotNull NetworkParser2Parser.Ipv4tosContext ctx) { return visitChildren(ctx); }
+
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.
+	 */
+	@Override public T visitProtname(@NotNull NetworkParser2Parser.ProtnameContext ctx) { return visitChildren(ctx); }
+
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.
+	 */
+	@Override public T visitIpv4content(@NotNull NetworkParser2Parser.Ipv4contentContext ctx) { return visitChildren(ctx); }
+
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.
+	 */
+	@Override public T visitIpv4fields(@NotNull NetworkParser2Parser.Ipv4fieldsContext ctx) { return visitChildren(ctx); }
+
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.
+	 */
+	@Override public T visitTime(@NotNull NetworkParser2Parser.TimeContext ctx) { return visitChildren(ctx); }
+
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.
+	 */
+	@Override public T visitTag(@NotNull NetworkParser2Parser.TagContext ctx) { return visitChildren(ctx); }
 }

@@ -1,5 +1,5 @@
-package Frontend;
 // Generated from C:\Users\Hjorthen\NetworkParser2.g4 by ANTLR 4.1
+package Frontend;
 
 import org.antlr.v4.runtime.ParserRuleContext;
 import org.antlr.v4.runtime.misc.NotNull;
@@ -30,117 +30,52 @@ public class NetworkParser2BaseListener implements NetworkParser2Listener {
 	 * <p/>
 	 * The default implementation does nothing.
 	 */
-	@Override public void enterAddress(@NotNull NetworkParser2Parser.AddressContext ctx) { }
+	@Override public void enterIpv4flags(@NotNull NetworkParser2Parser.Ipv4flagsContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 * <p/>
 	 * The default implementation does nothing.
 	 */
-	@Override public void exitAddress(@NotNull NetworkParser2Parser.AddressContext ctx) { }
+	@Override public void exitIpv4flags(@NotNull NetworkParser2Parser.Ipv4flagsContext ctx) { }
 
 	/**
 	 * {@inheritDoc}
 	 * <p/>
 	 * The default implementation does nothing.
 	 */
-	@Override public void enterIp(@NotNull NetworkParser2Parser.IpContext ctx) { }
+	@Override public void enterDumpline(@NotNull NetworkParser2Parser.DumplineContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 * <p/>
 	 * The default implementation does nothing.
 	 */
-	@Override public void exitIp(@NotNull NetworkParser2Parser.IpContext ctx) { }
+	@Override public void exitDumpline(@NotNull NetworkParser2Parser.DumplineContext ctx) { }
 
 	/**
 	 * {@inheritDoc}
 	 * <p/>
 	 * The default implementation does nothing.
 	 */
-	@Override public void enterHeader(@NotNull NetworkParser2Parser.HeaderContext ctx) { }
+	@Override public void enterPacket(@NotNull NetworkParser2Parser.PacketContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 * <p/>
 	 * The default implementation does nothing.
 	 */
-	@Override public void exitHeader(@NotNull NetworkParser2Parser.HeaderContext ctx) { }
+	@Override public void exitPacket(@NotNull NetworkParser2Parser.PacketContext ctx) { }
 
 	/**
 	 * {@inheritDoc}
 	 * <p/>
 	 * The default implementation does nothing.
 	 */
-	@Override public void enterHex(@NotNull NetworkParser2Parser.HexContext ctx) { }
+	@Override public void enterType(@NotNull NetworkParser2Parser.TypeContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 * <p/>
 	 * The default implementation does nothing.
 	 */
-	@Override public void exitHex(@NotNull NetworkParser2Parser.HexContext ctx) { }
-
-	/**
-	 * {@inheritDoc}
-	 * <p/>
-	 * The default implementation does nothing.
-	 */
-	@Override public void enterBodyContent(@NotNull NetworkParser2Parser.BodyContentContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 * <p/>
-	 * The default implementation does nothing.
-	 */
-	@Override public void exitBodyContent(@NotNull NetworkParser2Parser.BodyContentContext ctx) { }
-
-	/**
-	 * {@inheritDoc}
-	 * <p/>
-	 * The default implementation does nothing.
-	 */
-	@Override public void enterProgram(@NotNull NetworkParser2Parser.ProgramContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 * <p/>
-	 * The default implementation does nothing.
-	 */
-	@Override public void exitProgram(@NotNull NetworkParser2Parser.ProgramContext ctx) { }
-
-	/**
-	 * {@inheritDoc}
-	 * <p/>
-	 * The default implementation does nothing.
-	 */
-	@Override public void enterOptionsheader(@NotNull NetworkParser2Parser.OptionsheaderContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 * <p/>
-	 * The default implementation does nothing.
-	 */
-	@Override public void exitOptionsheader(@NotNull NetworkParser2Parser.OptionsheaderContext ctx) { }
-
-	/**
-	 * {@inheritDoc}
-	 * <p/>
-	 * The default implementation does nothing.
-	 */
-	@Override public void enterBody(@NotNull NetworkParser2Parser.BodyContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 * <p/>
-	 * The default implementation does nothing.
-	 */
-	@Override public void exitBody(@NotNull NetworkParser2Parser.BodyContext ctx) { }
-
-	/**
-	 * {@inheritDoc}
-	 * <p/>
-	 * The default implementation does nothing.
-	 */
-	@Override public void enterWord(@NotNull NetworkParser2Parser.WordContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 * <p/>
-	 * The default implementation does nothing.
-	 */
-	@Override public void exitWord(@NotNull NetworkParser2Parser.WordContext ctx) { }
+	@Override public void exitType(@NotNull NetworkParser2Parser.TypeContext ctx) { }
 
 	/**
 	 * {@inheritDoc}
@@ -160,13 +95,143 @@ public class NetworkParser2BaseListener implements NetworkParser2Listener {
 	 * <p/>
 	 * The default implementation does nothing.
 	 */
-	@Override public void enterTimestamp(@NotNull NetworkParser2Parser.TimestampContext ctx) { }
+	@Override public void enterProtinfo(@NotNull NetworkParser2Parser.ProtinfoContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 * <p/>
 	 * The default implementation does nothing.
 	 */
-	@Override public void exitTimestamp(@NotNull NetworkParser2Parser.TimestampContext ctx) { }
+	@Override public void exitProtinfo(@NotNull NetworkParser2Parser.ProtinfoContext ctx) { }
+
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation does nothing.
+	 */
+	@Override public void enterFile(@NotNull NetworkParser2Parser.FileContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation does nothing.
+	 */
+	@Override public void exitFile(@NotNull NetworkParser2Parser.FileContext ctx) { }
+
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation does nothing.
+	 */
+	@Override public void enterIpv4proto(@NotNull NetworkParser2Parser.Ipv4protoContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation does nothing.
+	 */
+	@Override public void exitIpv4proto(@NotNull NetworkParser2Parser.Ipv4protoContext ctx) { }
+
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation does nothing.
+	 */
+	@Override public void enterIpv4(@NotNull NetworkParser2Parser.Ipv4Context ctx) { }
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation does nothing.
+	 */
+	@Override public void exitIpv4(@NotNull NetworkParser2Parser.Ipv4Context ctx) { }
+
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation does nothing.
+	 */
+	@Override public void enterFlagvalues(@NotNull NetworkParser2Parser.FlagvaluesContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation does nothing.
+	 */
+	@Override public void exitFlagvalues(@NotNull NetworkParser2Parser.FlagvaluesContext ctx) { }
+
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation does nothing.
+	 */
+	@Override public void enterIpv4tos(@NotNull NetworkParser2Parser.Ipv4tosContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation does nothing.
+	 */
+	@Override public void exitIpv4tos(@NotNull NetworkParser2Parser.Ipv4tosContext ctx) { }
+
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation does nothing.
+	 */
+	@Override public void enterProtname(@NotNull NetworkParser2Parser.ProtnameContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation does nothing.
+	 */
+	@Override public void exitProtname(@NotNull NetworkParser2Parser.ProtnameContext ctx) { }
+
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation does nothing.
+	 */
+	@Override public void enterIpv4content(@NotNull NetworkParser2Parser.Ipv4contentContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation does nothing.
+	 */
+	@Override public void exitIpv4content(@NotNull NetworkParser2Parser.Ipv4contentContext ctx) { }
+
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation does nothing.
+	 */
+	@Override public void enterIpv4fields(@NotNull NetworkParser2Parser.Ipv4fieldsContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation does nothing.
+	 */
+	@Override public void exitIpv4fields(@NotNull NetworkParser2Parser.Ipv4fieldsContext ctx) { }
+
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation does nothing.
+	 */
+	@Override public void enterTime(@NotNull NetworkParser2Parser.TimeContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation does nothing.
+	 */
+	@Override public void exitTime(@NotNull NetworkParser2Parser.TimeContext ctx) { }
+
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation does nothing.
+	 */
+	@Override public void enterTag(@NotNull NetworkParser2Parser.TagContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation does nothing.
+	 */
+	@Override public void exitTag(@NotNull NetworkParser2Parser.TagContext ctx) { }
 
 	/**
 	 * {@inheritDoc}

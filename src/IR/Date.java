@@ -1,6 +1,6 @@
 package IR;
 
-public class Date {
+public class Date extends IR{
 	
 	private int year;
 	private int month;

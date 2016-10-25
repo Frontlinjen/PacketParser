@@ -1,5 +1,5 @@
-package Frontend;
 // Generated from C:\Users\Hjorthen\NetworkParser2.g4 by ANTLR 4.1
+package Frontend;
 import org.antlr.v4.runtime.misc.NotNull;
 import org.antlr.v4.runtime.tree.ParseTreeListener;
 
@@ -20,103 +20,48 @@ public interface NetworkParser2Listener extends ParseTreeListener {
 	void exitDate(@NotNull NetworkParser2Parser.DateContext ctx);
 
 	/**
-	 * Enter a parse tree produced by {@link NetworkParser2Parser#address}.
+	 * Enter a parse tree produced by {@link NetworkParser2Parser#ipv4flags}.
 	 * @param ctx the parse tree
 	 */
-	void enterAddress(@NotNull NetworkParser2Parser.AddressContext ctx);
+	void enterIpv4flags(@NotNull NetworkParser2Parser.Ipv4flagsContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link NetworkParser2Parser#address}.
+	 * Exit a parse tree produced by {@link NetworkParser2Parser#ipv4flags}.
 	 * @param ctx the parse tree
 	 */
-	void exitAddress(@NotNull NetworkParser2Parser.AddressContext ctx);
+	void exitIpv4flags(@NotNull NetworkParser2Parser.Ipv4flagsContext ctx);
 
 	/**
-	 * Enter a parse tree produced by {@link NetworkParser2Parser#ip}.
+	 * Enter a parse tree produced by {@link NetworkParser2Parser#dumpline}.
 	 * @param ctx the parse tree
 	 */
-	void enterIp(@NotNull NetworkParser2Parser.IpContext ctx);
+	void enterDumpline(@NotNull NetworkParser2Parser.DumplineContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link NetworkParser2Parser#ip}.
+	 * Exit a parse tree produced by {@link NetworkParser2Parser#dumpline}.
 	 * @param ctx the parse tree
 	 */
-	void exitIp(@NotNull NetworkParser2Parser.IpContext ctx);
+	void exitDumpline(@NotNull NetworkParser2Parser.DumplineContext ctx);
 
 	/**
-	 * Enter a parse tree produced by {@link NetworkParser2Parser#header}.
+	 * Enter a parse tree produced by {@link NetworkParser2Parser#packet}.
 	 * @param ctx the parse tree
 	 */
-	void enterHeader(@NotNull NetworkParser2Parser.HeaderContext ctx);
+	void enterPacket(@NotNull NetworkParser2Parser.PacketContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link NetworkParser2Parser#header}.
+	 * Exit a parse tree produced by {@link NetworkParser2Parser#packet}.
 	 * @param ctx the parse tree
 	 */
-	void exitHeader(@NotNull NetworkParser2Parser.HeaderContext ctx);
+	void exitPacket(@NotNull NetworkParser2Parser.PacketContext ctx);
 
 	/**
-	 * Enter a parse tree produced by {@link NetworkParser2Parser#hex}.
+	 * Enter a parse tree produced by {@link NetworkParser2Parser#type}.
 	 * @param ctx the parse tree
 	 */
-	void enterHex(@NotNull NetworkParser2Parser.HexContext ctx);
+	void enterType(@NotNull NetworkParser2Parser.TypeContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link NetworkParser2Parser#hex}.
+	 * Exit a parse tree produced by {@link NetworkParser2Parser#type}.
 	 * @param ctx the parse tree
 	 */
-	void exitHex(@NotNull NetworkParser2Parser.HexContext ctx);
-
-	/**
-	 * Enter a parse tree produced by {@link NetworkParser2Parser#bodyContent}.
-	 * @param ctx the parse tree
-	 */
-	void enterBodyContent(@NotNull NetworkParser2Parser.BodyContentContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link NetworkParser2Parser#bodyContent}.
-	 * @param ctx the parse tree
-	 */
-	void exitBodyContent(@NotNull NetworkParser2Parser.BodyContentContext ctx);
-
-	/**
-	 * Enter a parse tree produced by {@link NetworkParser2Parser#program}.
-	 * @param ctx the parse tree
-	 */
-	void enterProgram(@NotNull NetworkParser2Parser.ProgramContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link NetworkParser2Parser#program}.
-	 * @param ctx the parse tree
-	 */
-	void exitProgram(@NotNull NetworkParser2Parser.ProgramContext ctx);
-
-	/**
-	 * Enter a parse tree produced by {@link NetworkParser2Parser#optionsheader}.
-	 * @param ctx the parse tree
-	 */
-	void enterOptionsheader(@NotNull NetworkParser2Parser.OptionsheaderContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link NetworkParser2Parser#optionsheader}.
-	 * @param ctx the parse tree
-	 */
-	void exitOptionsheader(@NotNull NetworkParser2Parser.OptionsheaderContext ctx);
-
-	/**
-	 * Enter a parse tree produced by {@link NetworkParser2Parser#body}.
-	 * @param ctx the parse tree
-	 */
-	void enterBody(@NotNull NetworkParser2Parser.BodyContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link NetworkParser2Parser#body}.
-	 * @param ctx the parse tree
-	 */
-	void exitBody(@NotNull NetworkParser2Parser.BodyContext ctx);
-
-	/**
-	 * Enter a parse tree produced by {@link NetworkParser2Parser#word}.
-	 * @param ctx the parse tree
-	 */
-	void enterWord(@NotNull NetworkParser2Parser.WordContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link NetworkParser2Parser#word}.
-	 * @param ctx the parse tree
-	 */
-	void exitWord(@NotNull NetworkParser2Parser.WordContext ctx);
+	void exitType(@NotNull NetworkParser2Parser.TypeContext ctx);
 
 	/**
 	 * Enter a parse tree produced by {@link NetworkParser2Parser#mac}.
@@ -130,13 +75,123 @@ public interface NetworkParser2Listener extends ParseTreeListener {
 	void exitMac(@NotNull NetworkParser2Parser.MacContext ctx);
 
 	/**
-	 * Enter a parse tree produced by {@link NetworkParser2Parser#timestamp}.
+	 * Enter a parse tree produced by {@link NetworkParser2Parser#protinfo}.
 	 * @param ctx the parse tree
 	 */
-	void enterTimestamp(@NotNull NetworkParser2Parser.TimestampContext ctx);
+	void enterProtinfo(@NotNull NetworkParser2Parser.ProtinfoContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link NetworkParser2Parser#timestamp}.
+	 * Exit a parse tree produced by {@link NetworkParser2Parser#protinfo}.
 	 * @param ctx the parse tree
 	 */
-	void exitTimestamp(@NotNull NetworkParser2Parser.TimestampContext ctx);
+	void exitProtinfo(@NotNull NetworkParser2Parser.ProtinfoContext ctx);
+
+	/**
+	 * Enter a parse tree produced by {@link NetworkParser2Parser#file}.
+	 * @param ctx the parse tree
+	 */
+	void enterFile(@NotNull NetworkParser2Parser.FileContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link NetworkParser2Parser#file}.
+	 * @param ctx the parse tree
+	 */
+	void exitFile(@NotNull NetworkParser2Parser.FileContext ctx);
+
+	/**
+	 * Enter a parse tree produced by {@link NetworkParser2Parser#ipv4proto}.
+	 * @param ctx the parse tree
+	 */
+	void enterIpv4proto(@NotNull NetworkParser2Parser.Ipv4protoContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link NetworkParser2Parser#ipv4proto}.
+	 * @param ctx the parse tree
+	 */
+	void exitIpv4proto(@NotNull NetworkParser2Parser.Ipv4protoContext ctx);
+
+	/**
+	 * Enter a parse tree produced by {@link NetworkParser2Parser#ipv4}.
+	 * @param ctx the parse tree
+	 */
+	void enterIpv4(@NotNull NetworkParser2Parser.Ipv4Context ctx);
+	/**
+	 * Exit a parse tree produced by {@link NetworkParser2Parser#ipv4}.
+	 * @param ctx the parse tree
+	 */
+	void exitIpv4(@NotNull NetworkParser2Parser.Ipv4Context ctx);
+
+	/**
+	 * Enter a parse tree produced by {@link NetworkParser2Parser#flagvalues}.
+	 * @param ctx the parse tree
+	 */
+	void enterFlagvalues(@NotNull NetworkParser2Parser.FlagvaluesContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link NetworkParser2Parser#flagvalues}.
+	 * @param ctx the parse tree
+	 */
+	void exitFlagvalues(@NotNull NetworkParser2Parser.FlagvaluesContext ctx);
+
+	/**
+	 * Enter a parse tree produced by {@link NetworkParser2Parser#ipv4tos}.
+	 * @param ctx the parse tree
+	 */
+	void enterIpv4tos(@NotNull NetworkParser2Parser.Ipv4tosContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link NetworkParser2Parser#ipv4tos}.
+	 * @param ctx the parse tree
+	 */
+	void exitIpv4tos(@NotNull NetworkParser2Parser.Ipv4tosContext ctx);
+
+	/**
+	 * Enter a parse tree produced by {@link NetworkParser2Parser#protname}.
+	 * @param ctx the parse tree
+	 */
+	void enterProtname(@NotNull NetworkParser2Parser.ProtnameContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link NetworkParser2Parser#protname}.
+	 * @param ctx the parse tree
+	 */
+	void exitProtname(@NotNull NetworkParser2Parser.ProtnameContext ctx);
+
+	/**
+	 * Enter a parse tree produced by {@link NetworkParser2Parser#ipv4content}.
+	 * @param ctx the parse tree
+	 */
+	void enterIpv4content(@NotNull NetworkParser2Parser.Ipv4contentContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link NetworkParser2Parser#ipv4content}.
+	 * @param ctx the parse tree
+	 */
+	void exitIpv4content(@NotNull NetworkParser2Parser.Ipv4contentContext ctx);
+
+	/**
+	 * Enter a parse tree produced by {@link NetworkParser2Parser#ipv4fields}.
+	 * @param ctx the parse tree
+	 */
+	void enterIpv4fields(@NotNull NetworkParser2Parser.Ipv4fieldsContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link NetworkParser2Parser#ipv4fields}.
+	 * @param ctx the parse tree
+	 */
+	void exitIpv4fields(@NotNull NetworkParser2Parser.Ipv4fieldsContext ctx);
+
+	/**
+	 * Enter a parse tree produced by {@link NetworkParser2Parser#time}.
+	 * @param ctx the parse tree
+	 */
+	void enterTime(@NotNull NetworkParser2Parser.TimeContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link NetworkParser2Parser#time}.
+	 * @param ctx the parse tree
+	 */
+	void exitTime(@NotNull NetworkParser2Parser.TimeContext ctx);
+
+	/**
+	 * Enter a parse tree produced by {@link NetworkParser2Parser#tag}.
+	 * @param ctx the parse tree
+	 */
+	void enterTag(@NotNull NetworkParser2Parser.TagContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link NetworkParser2Parser#tag}.
+	 * @param ctx the parse tree
+	 */
+	void exitTag(@NotNull NetworkParser2Parser.TagContext ctx);
 }
