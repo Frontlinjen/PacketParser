@@ -68,14 +68,16 @@ public class PacketParserIRBuilder implements NetworkParser2Visitor<IR> {
 
 	@Override
 	public IR visitType(TypeContext ctx) {
-		// TODO Auto-generated method stub
-		return null;
+		EtherType ET = new EtherType(new NP2HexaDecimal(ctx.getText()));
+		
+		return ET;
 	}
 
 	@Override
 	public IR visitMac(MacContext ctx) {
-		// TODO Auto-generated method stub
-		return null;
+		MacAddress macAdd = new MacAddress(ctx.getText());
+		
+		return macAdd;	
 	}
 
 	@Override
