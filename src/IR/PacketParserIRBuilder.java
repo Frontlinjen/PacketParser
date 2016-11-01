@@ -1,5 +1,5 @@
-
 package IR;
+
 import java.util.List;
 
 import org.antlr.v4.runtime.tree.ErrorNode;
@@ -90,8 +90,7 @@ public class PacketParserIRBuilder implements NetworkParser2Visitor<IR> {
 			newPacket.header.reciever = (MacAddress) visitMac(packet.destinationMac);
 			newPacket.header.type = (EtherType) visitType(packet.ethertype);
 			newPacket.header.contentLength = Integer.parseInt(packet.totalLength.getText());
-			newPacket.content = (HeaderContent) visitIpv4content(packet.content);
-			
+			newPacket.content = (Content) visitIpv4content(packet.content);		
 		}
 		return null;
 	}
@@ -128,7 +127,10 @@ public class PacketParserIRBuilder implements NetworkParser2Visitor<IR> {
 
 	@Override
 	public IR visitIpv4content(Ipv4contentContext ctx) {
-		
+		Content content = new Content();
+		content.senderIP = new IPv4(ctx.source.getText());
+		content.recieverIP = new IPv4(ctx.destination.getText());
+		return null;
 	}
 
 	@Override
