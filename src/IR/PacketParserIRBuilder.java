@@ -39,8 +39,13 @@ public class PacketParserIRBuilder implements NetworkParser2Visitor<IR> {
 
 	@Override
 	public IR visitDate(DateContext ctx) {
-		// TODO Auto-generated method stub
-		return null;
+		int year = Integer.parseInt(ctx.day.getText());
+		int month = Integer.parseInt(ctx.day.getText());
+		int day = Integer.parseInt(ctx.day.getText());
+
+		Date datecontext = new Date(year, month, day);
+				
+		return datecontext;
 	}
 
 	@Override
@@ -130,19 +135,34 @@ public class PacketParserIRBuilder implements NetworkParser2Visitor<IR> {
 		Content content = new Content();
 		content.senderIP = new IPv4(ctx.source.getText());
 		content.recieverIP = new IPv4(ctx.destination.getText());
-		return null;
+		content.tos = new NP2HexaDecimal(ctx.ipv4fields().tos.getText());
+		content.TTL = Integer.parseInt(ctx.ipv4fields().ttl.getText());
+		content.id = Integer.parseInt(ctx.ipv4fields().id.getText());
+		content.offset = Integer.parseInt(ctx.ipv4fields().offset.getText());
+		content.protoID = Integer.parseInt(ctx.ipv4fields().protocol.getText());
+		content.headerLength = Integer.parseInt(ctx.ipv4fields().headLength.getText());
+		content.flags = ctx.ipv4fields().flags.getText();
+		content.proto = ctx.ipv4fields().protocol.getText();
+				
+		return content;
 	}
 
 	@Override
 	public IR visitIpv4fields(Ipv4fieldsContext ctx) {
-		// TODO Auto-generated method stub
+		
 		return null;
 	}
 
 	@Override
 	public IR visitTime(TimeContext ctx) {
-		// TODO Auto-generated method stub
-		return null;
+		int hour = Integer.parseInt(ctx.hour.getText());
+		int minutes = Integer.parseInt(ctx.hour.getText());
+		int seconds = Integer.parseInt(ctx.hour.getText());
+		int miliseconds = Integer.parseInt(ctx.hour.getText());
+
+		Timestamp timecontext = new Timestamp(hour, minutes, seconds, miliseconds);
+				
+		return timecontext;
 	}
 
 	@Override

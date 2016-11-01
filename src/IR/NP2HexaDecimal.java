@@ -11,6 +11,16 @@ public class NP2HexaDecimal extends IR {
 		}
 	}
 	
+	public NP2HexaDecimal(String input){
+		if(input.length() == 2 && (isValidHexa(input.charAt(0)) && isValidHexa(input.charAt(1)))){
+			c[0] = input.charAt(0);
+			c[1] = input.charAt(1);
+		}
+		else{
+			throw new IllegalArgumentException("You dun fucked it up");
+		}
+	}
+	
 	private boolean isValidHexa(char c)
 	{
 		c = Character.toLowerCase(c);
