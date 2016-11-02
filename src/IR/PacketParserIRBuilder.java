@@ -2,8 +2,8 @@ package IR;
 
 import java.util.List;
 
+import org.antlr.v4.runtime.tree.AbstractParseTreeVisitor;
 import org.antlr.v4.runtime.tree.ErrorNode;
-import org.antlr.v4.runtime.tree.ParseTree;
 import org.antlr.v4.runtime.tree.RuleNode;
 import org.antlr.v4.runtime.tree.TerminalNode;
 
@@ -11,13 +11,7 @@ import Frontend.NetworkParser2Visitor;
 import Frontend.NetworkParser2Parser.*;
 
 
-public class PacketParserIRBuilder implements NetworkParser2Visitor<IR> {
-
-	@Override
-	public IR visit(ParseTree arg0) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+public class PacketParserIRBuilder extends AbstractParseTreeVisitor<IR> implements NetworkParser2Visitor<IR> {
 
 	@Override
 	public IR visitChildren(RuleNode arg0) {
