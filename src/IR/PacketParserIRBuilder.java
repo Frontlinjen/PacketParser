@@ -33,8 +33,8 @@ public class PacketParserIRBuilder extends AbstractParseTreeVisitor<IR> implemen
 
 	@Override
 	public IR visitDate(DateContext ctx) {
-		int year = Integer.parseInt(ctx.day.getText());
-		int month = Integer.parseInt(ctx.day.getText());
+		int year = Integer.parseInt(ctx.year.getText());
+		int month = Integer.parseInt(ctx.month.getText());
 		int day = Integer.parseInt(ctx.day.getText());
 
 		System.out.println("Date: " + year + "-" + month + "-" + day);
@@ -64,7 +64,7 @@ public class PacketParserIRBuilder extends AbstractParseTreeVisitor<IR> implemen
 
 	@Override
 	public IR visitType(TypeContext ctx) {
-		EtherType ET = new EtherType(new NP2HexaDecimal(ctx.getText()));
+		EtherType ET = new EtherType(ctx.getText());
 		System.out.println("Type:" + ET);
 		return ET;
 	}
@@ -135,11 +135,11 @@ public class PacketParserIRBuilder extends AbstractParseTreeVisitor<IR> implemen
 		Content content = new Content();
 		content.senderIP = new IPv4(ctx.source.getText());
 		content.recieverIP = new IPv4(ctx.destination.getText());
-		content.tos = new NP2HexaDecimal(ctx.ipv4fields().tos.getText());
+		content.tos =ctx.ipv4fields().tos.getText();
 		content.TTL = Integer.parseInt(ctx.ipv4fields().ttl.getText());
 		content.id = Integer.parseInt(ctx.ipv4fields().id.getText());
 		content.offset = Integer.parseInt(ctx.ipv4fields().offset.getText());
-		content.protoID = Integer.parseInt(ctx.ipv4fields().protocol.getText());
+		content.protoID = ctx.ipv4fields().protocol.getText();
 		content.headerLength = Integer.parseInt(ctx.ipv4fields().headLength.getText());
 		content.flags = ctx.ipv4fields().flags.getText();
 		content.proto = ctx.ipv4fields().protocol.getText();

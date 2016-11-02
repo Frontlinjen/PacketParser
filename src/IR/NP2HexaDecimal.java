@@ -5,19 +5,20 @@ public class NP2HexaDecimal extends IR {
 	public NP2HexaDecimal(char[] c) throws IllegalArgumentException{
 		this.c = c;
 		for (char d : c) {
-			if(isValidHexa(d)){
-				throw new IllegalArgumentException("You dun fucked it up");
+			if(!isValidHexa(d)){
+				throw new IllegalArgumentException(d + " is not a valid hex character");
 			}
 		}
 	}
 	
 	public NP2HexaDecimal(String input){
+		input = input.replaceFirst("0x", "");
 		if(input.length() == 2 && (isValidHexa(input.charAt(0)) && isValidHexa(input.charAt(1)))){
 			c[0] = input.charAt(0);
 			c[1] = input.charAt(1);
 		}
 		else{
-			throw new IllegalArgumentException("You dun fucked it up");
+			throw new IllegalArgumentException( input + " is not a valid hex string");
 		}
 	}
 	
