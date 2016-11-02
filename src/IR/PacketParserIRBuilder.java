@@ -92,6 +92,7 @@ public class PacketParserIRBuilder implements NetworkParser2Visitor<IR> {
 	public IR visitFile(FileContext ctx) {
 		List<PacketContext> packages = ctx.packet();
 		for (PacketContext packet : packages) {
+			System.out.println("--START PACKAGE--\n");
 			IPv4Packet newPacket = new IPv4Packet();
 			newPacket.header.date = (Date) visitDate(packet.datestamp);
 			newPacket.header.timestamp = (Timestamp) visitTime(packet.timestamp);
@@ -99,7 +100,8 @@ public class PacketParserIRBuilder implements NetworkParser2Visitor<IR> {
 			newPacket.header.reciever = (MacAddress) visitMac(packet.destinationMac);
 			newPacket.header.type = (EtherType) visitType(packet.ethertype);
 			newPacket.header.contentLength = Integer.parseInt(packet.totalLength.getText());
-			newPacket.content = (Content) visitIpv4content(packet.content);		
+			newPacket.content = (Content) visitIpv4content(packet.content);	
+			System.out.println("\n--END PACKAGE--");
 		}
 		return null;
 	}
