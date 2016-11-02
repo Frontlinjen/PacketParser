@@ -43,7 +43,7 @@ public class PacketParserIRBuilder implements NetworkParser2Visitor<IR> {
 		int month = Integer.parseInt(ctx.day.getText());
 		int day = Integer.parseInt(ctx.day.getText());
 
-		System.out.println("Date: " + year + "-" + "month" + "-" + day);
+		System.out.println("Date: " + year + "-" + month + "-" + day);
 		
 		Date datecontext = new Date(year, month, day);
 				
@@ -71,14 +71,14 @@ public class PacketParserIRBuilder implements NetworkParser2Visitor<IR> {
 	@Override
 	public IR visitType(TypeContext ctx) {
 		EtherType ET = new EtherType(new NP2HexaDecimal(ctx.getText()));
-		
+		System.out.println("Type:" + ET);
 		return ET;
 	}
 
 	@Override
 	public IR visitMac(MacContext ctx) {
 		MacAddress macAdd = new MacAddress(ctx.getText());
-		
+		System.out.println("MAC:" + macAdd);
 		return macAdd;	
 	}
 
@@ -163,6 +163,8 @@ public class PacketParserIRBuilder implements NetworkParser2Visitor<IR> {
 		int minutes = Integer.parseInt(ctx.hour.getText());
 		int seconds = Integer.parseInt(ctx.hour.getText());
 		int miliseconds = Integer.parseInt(ctx.hour.getText());
+		
+		System.out.println("Timestamp: " + hour + ":" + minutes + ":" + seconds + "." + miliseconds);
 
 		Timestamp timecontext = new Timestamp(hour, minutes, seconds, miliseconds);
 				
