@@ -143,7 +143,11 @@ public class PacketParserIRBuilder extends AbstractParseTreeVisitor<IR> implemen
 		content.headerLength = Integer.parseInt(ctx.ipv4fields().headLength.getText());
 		content.flags = ctx.ipv4fields().flags.getText();
 		content.proto = ctx.ipv4fields().protocol.getText();
-				
+		
+		System.out.println("IPv4:" + " Sender IP: " + content.senderIP + " Reciever IP: " + content.recieverIP + " tos: " + content.tos
+							+ " TLL: " + content.TTL + " id: " + content.id + " offset: " + content.offset + " protoID: " + content.protoID
+							+ " header length: " + content.headerLength + " flags: " + content.flags + " proto: " + content.proto);
+		
 		return content;
 	}
 
