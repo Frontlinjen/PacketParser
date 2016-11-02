@@ -4,7 +4,7 @@ import java.awt.Color;
 
 import javax.swing.text.html.CSS.Attribute;
 
-public class PrinterOffDoom {
+public class PrettyPrinter {
 
 	public coloredString(Color color, String text){
 		System.out.println(text, color.);
