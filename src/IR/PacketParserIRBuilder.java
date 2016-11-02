@@ -43,6 +43,8 @@ public class PacketParserIRBuilder implements NetworkParser2Visitor<IR> {
 		int month = Integer.parseInt(ctx.day.getText());
 		int day = Integer.parseInt(ctx.day.getText());
 
+		System.out.println("Date: " + year + "-" + "month" + "-" + day);
+		
 		Date datecontext = new Date(year, month, day);
 				
 		return datecontext;
