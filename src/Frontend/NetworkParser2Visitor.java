@@ -122,4 +122,11 @@ public interface NetworkParser2Visitor<T> extends ParseTreeVisitor<T> {
 	 * @return the visitor result
 	 */
 	T visitTag(@NotNull NetworkParser2Parser.TagContext ctx);
+
+	/**
+	 * Visit a parse tree produced by {@link NetworkParser2Parser#hextest}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitHextest(@NotNull NetworkParser2Parser.HextestContext ctx);
 }
