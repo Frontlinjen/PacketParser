@@ -2,17 +2,17 @@ package IR;
 
 public class EtherType  extends IR{
 	
-	private String hd;
+	private NP2HexaDecimal hd;
 	
-	public EtherType(String hd){
+	public EtherType(NP2HexaDecimal hd){
 		this.hd = hd;
 	}
 	
-	public String getNP2HexaDecimal(){
+	public NP2HexaDecimal getNP2HexaDecimal(){
 		return this.hd;
 	}
 	
-	public void setNP2HexaDecimal(String hd){
+	public void setNP2HexaDecimal(NP2HexaDecimal hd){
 		this.hd = hd;
 	}
 	

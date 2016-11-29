@@ -62,9 +62,8 @@ public class PacketParserIRBuilder extends AbstractParseTreeVisitor<IR> implemen
 		return null;
 	}
 
-	@Override
-	public IR visitType(TypeContext ctx) {
-		EtherType ET = new EtherType(ctx.getText());
+	public IR visitType(Ipv4Context ctx) {
+		EtherType ET = new EtherType(new NP2HexaDecimal(ctx.tagNumber.packetType.getText()));
 		System.out.println("Type:" + ET);
 		return ET;
 	}
@@ -135,11 +134,11 @@ public class PacketParserIRBuilder extends AbstractParseTreeVisitor<IR> implemen
 		Content content = new Content();
 		content.senderIP = new IPv4(ctx.source.getText());
 		content.recieverIP = new IPv4(ctx.destination.getText());
-		content.tos =ctx.ipv4fields().tos.getText();
+		content.tos = new NP2HexaDecimal(ctx.ipv4fields().tos.tos.getText());
 		content.TTL = Integer.parseInt(ctx.ipv4fields().ttl.getText());
 		content.id = Integer.parseInt(ctx.ipv4fields().id.getText());
 		content.offset = Integer.parseInt(ctx.ipv4fields().offset.getText());
-		content.protoID = ctx.ipv4fields().protocol.getText();
+		content.protoID = Integer.parseInt(ctx.ipv4fields().protocol.protoID.getText());
 		content.headerLength = Integer.parseInt(ctx.ipv4fields().headLength.getText());
 		content.flags = ctx.ipv4fields().flags.getText();
 		content.proto = ctx.ipv4fields().protocol.getText();
@@ -160,9 +159,9 @@ public class PacketParserIRBuilder extends AbstractParseTreeVisitor<IR> implemen
 	@Override
 	public IR visitTime(TimeContext ctx) {
 		int hour = Integer.parseInt(ctx.hour.getText());
-		int minutes = Integer.parseInt(ctx.hour.getText());
-		int seconds = Integer.parseInt(ctx.hour.getText());
-		int miliseconds = Integer.parseInt(ctx.hour.getText());
+		int minutes = Integer.parseInt(ctx.minutes.getText());
+		int seconds = Integer.parseInt(ctx.seconds.getText());
+		int miliseconds = Integer.parseInt(ctx.nanoseconds.getText());
 		
 		System.out.println("Timestamp: " + hour + ":" + minutes + ":" + seconds + "." + miliseconds);
 

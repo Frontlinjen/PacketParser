@@ -53,17 +53,6 @@ public interface NetworkParser2Listener extends ParseTreeListener {
 	void exitPacket(@NotNull NetworkParser2Parser.PacketContext ctx);
 
 	/**
-	 * Enter a parse tree produced by {@link NetworkParser2Parser#type}.
-	 * @param ctx the parse tree
-	 */
-	void enterType(@NotNull NetworkParser2Parser.TypeContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link NetworkParser2Parser#type}.
-	 * @param ctx the parse tree
-	 */
-	void exitType(@NotNull NetworkParser2Parser.TypeContext ctx);
-
-	/**
 	 * Enter a parse tree produced by {@link NetworkParser2Parser#mac}.
 	 * @param ctx the parse tree
 	 */

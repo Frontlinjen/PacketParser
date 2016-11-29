@@ -69,19 +69,6 @@ public class NetworkParser2BaseListener implements NetworkParser2Listener {
 	 * <p/>
 	 * The default implementation does nothing.
 	 */
-	@Override public void enterType(@NotNull NetworkParser2Parser.TypeContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 * <p/>
-	 * The default implementation does nothing.
-	 */
-	@Override public void exitType(@NotNull NetworkParser2Parser.TypeContext ctx) { }
-
-	/**
-	 * {@inheritDoc}
-	 * <p/>
-	 * The default implementation does nothing.
-	 */
 	@Override public void enterMac(@NotNull NetworkParser2Parser.MacContext ctx) { }
 	/**
 	 * {@inheritDoc}
