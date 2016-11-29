@@ -52,5 +52,11 @@ public class Timestamp extends IR {
 
 	public void setMiliseconds(int miliseconds) {
 		this.miliseconds = miliseconds;
+	}
+
+	@Override
+	public String toString() {
+		return "Timestamp [hour=" + hour + ", minutes=" + minutes + ", seconds=" + seconds + ", miliseconds="
+				+ miliseconds + "]";
 	}	
 }
