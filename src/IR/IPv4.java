@@ -18,4 +18,7 @@ public class IPv4 extends IR{
 		}
 	}
 	
+	public String toString(){
+		return arr.toString();
+	}
 }

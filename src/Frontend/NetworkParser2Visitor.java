@@ -40,13 +40,6 @@ public interface NetworkParser2Visitor<T> extends ParseTreeVisitor<T> {
 	T visitPacket(@NotNull NetworkParser2Parser.PacketContext ctx);
 
 	/**
-	 * Visit a parse tree produced by {@link NetworkParser2Parser#type}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitType(@NotNull NetworkParser2Parser.TypeContext ctx);
-
-	/**
 	 * Visit a parse tree produced by {@link NetworkParser2Parser#mac}.
 	 * @param ctx the parse tree
 	 * @return the visitor result

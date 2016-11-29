@@ -50,14 +50,6 @@ public class NetworkParser2BaseVisitor<T> extends AbstractParseTreeVisitor<T> im
 	 * The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.
 	 */
-	@Override public T visitType(@NotNull NetworkParser2Parser.TypeContext ctx) { return visitChildren(ctx); }
-
-	/**
-	 * {@inheritDoc}
-	 * <p/>
-	 * The default implementation returns the result of calling
-	 * {@link #visitChildren} on {@code ctx}.
-	 */
 	@Override public T visitMac(@NotNull NetworkParser2Parser.MacContext ctx) { return visitChildren(ctx); }
 
 	/**

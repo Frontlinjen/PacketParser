@@ -42,4 +42,8 @@ public class Date extends IR{
 	public void setDay(int day){
 		this.day = day;
 	}
+	
+	public String toString(){
+		return day+"/"+month+"/"+year;
+	}
 }
