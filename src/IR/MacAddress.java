@@ -3,7 +3,7 @@ package IR;
 import java.util.Arrays;
 
 public class MacAddress extends IR {
-
+	
 	private NP2HexaDecimal[] arr = new NP2HexaDecimal[6];
 	
 	public MacAddress(NP2HexaDecimal a,NP2HexaDecimal b,NP2HexaDecimal c,
@@ -23,6 +23,12 @@ public class MacAddress extends IR {
 	}
 	@Override
 	public String toString() {
-		return "MacAddress [arr=" + Arrays.toString(arr) + "]";
-	}
+		String hex = "";
+		for (int i = 0; i < arr.length-1; i++) {
+			hex = hex + arr[i] + ":";
+		}
+		hex  += arr[arr.length-1];
+		return hex;
+		 
+	};
 }

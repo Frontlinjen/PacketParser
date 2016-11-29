@@ -37,4 +37,8 @@ public class NP2HexaDecimal extends IR {
 		}
 		return result;
 	}
+	@Override
+	public String toString() {
+		return new String(c);
+	}
 }
