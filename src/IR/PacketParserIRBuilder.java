@@ -1,5 +1,6 @@
 package IR;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Hashtable;
 import java.util.Iterator;
@@ -12,6 +13,7 @@ import org.antlr.v4.runtime.tree.RuleNode;
 import org.antlr.v4.runtime.tree.TerminalNode;
 
 import Frontend.NetworkParser2Visitor;
+import Utility.Counter;
 import Frontend.NetworkParser2Parser.*;
 
 
@@ -88,7 +90,7 @@ public class PacketParserIRBuilder extends AbstractParseTreeVisitor<IR> implemen
 	@Override
 	public IR visitFile(FileContext ctx) {
 		List<PacketContext> packages = ctx.packet();
-		List<IPv4Packet> IPv4Packets = null;
+		List<IPv4Packet> IPv4Packets = new ArrayList<IPv4Packet>();
 		for (PacketContext packet : packages) {
 			System.out.println("--START PACKAGE--\n");
 			IPv4Packet newPacket = new IPv4Packet();
@@ -102,20 +104,20 @@ public class PacketParserIRBuilder extends AbstractParseTreeVisitor<IR> implemen
 			System.out.println("\n--END PACKAGE--");
 			IPv4Packets.add(newPacket);
 		}
-		HashMap<String, Integer> comb = new HashMap<String, Integer>();
+		HashMap<String, Counter> comb = new HashMap<String, Counter>();
 		for (IPv4Packet packet : IPv4Packets){
-			String key = packet.content.senderIP + "->" + packet.content.recieverIP;
-			Integer result = comb.get(key);
+			String key = packet.content.senderIP + " -> " + packet.content.recieverIP;
+			Counter result = comb.get(key);
 			if(result == null){
-				comb.put(key, 1);
+				comb.put(key, new Counter(1));
 			}
 			else{
-				result++;
+				result.Increment();
 			}
 		}
-		Iterator it = comb.entrySet().iterator();
+		Iterator<Map.Entry<String, Counter>> it = comb.entrySet().iterator();
 		while(it.hasNext()){
-			Map.Entry pair = (Map.Entry)it.next();
+			Map.Entry<String, Counter> pair = it.next();
 			System.out.println(pair.getKey() + ": " + pair.getValue());
 			it.remove();
 		}
@@ -195,6 +197,12 @@ public class PacketParserIRBuilder extends AbstractParseTreeVisitor<IR> implemen
 
 	@Override
 	public IR visitTag(TagContext ctx) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public IR visitHextest(HextestContext ctx) {
 		// TODO Auto-generated method stub
 		return null;
 	}
