@@ -125,7 +125,27 @@ public class PacketParserIRBuilder extends AbstractParseTreeVisitor<IR> implemen
 		HashMap<String, String> IPAddress = new HashMap<String, String>();
 		HashMap<String, String> MacAddress = new HashMap<String, String>();
 		for (IPv4Packet packet : IPv4Packets){
-			String Mac = IPAddress.get()
+			String currentIP = packet.content.senderIP.toString();
+			String currentMac = packet.header.sender.toString();
+			String Mac = IPAddress.get(currentIP);
+			String IP = MacAddress.get(currentMac);
+			System.err.println(currentIP + " " + currentMac + " " + Mac + " " + IP);
+			if(Mac==null)
+			{
+				IPAddress.put(currentMac, currentIP);
+			}
+			else if(!Mac.equals(currentMac))
+			{
+				System.err.println("IP " + currentIP + " changed from " + Mac + " to " + currentMac);
+			}
+			if(IP==null)
+			{
+				MacAddress.put(currentIP, currentMac);
+			}
+			else if(!IP.equals(currentIP))
+			{
+				System.err.println(currentMac + " changed from " + IP + " to " + currentIP);
+			}
 		}
 		return null;
 	}
