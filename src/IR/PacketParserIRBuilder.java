@@ -115,11 +115,17 @@ public class PacketParserIRBuilder extends AbstractParseTreeVisitor<IR> implemen
 				result.Increment();
 			}
 		}
+		System.out.println("Printing IP overview: ");
 		Iterator<Map.Entry<String, Counter>> it = comb.entrySet().iterator();
 		while(it.hasNext()){
 			Map.Entry<String, Counter> pair = it.next();
 			System.out.println(pair.getKey() + ": " + pair.getValue());
 			it.remove();
+		}
+		HashMap<String, String> IPAddress = new HashMap<String, String>();
+		HashMap<String, String> MacAddress = new HashMap<String, String>();
+		for (IPv4Packet packet : IPv4Packets){
+			String Mac = IPAddress.get()
 		}
 		return null;
 	}
