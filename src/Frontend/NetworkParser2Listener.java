@@ -183,4 +183,15 @@ public interface NetworkParser2Listener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitTag(@NotNull NetworkParser2Parser.TagContext ctx);
+
+	/**
+	 * Enter a parse tree produced by {@link NetworkParser2Parser#hextest}.
+	 * @param ctx the parse tree
+	 */
+	void enterHextest(@NotNull NetworkParser2Parser.HextestContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link NetworkParser2Parser#hextest}.
+	 * @param ctx the parse tree
+	 */
+	void exitHextest(@NotNull NetworkParser2Parser.HextestContext ctx);
 }

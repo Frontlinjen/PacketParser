@@ -225,6 +225,19 @@ public class NetworkParser2BaseListener implements NetworkParser2Listener {
 	 * <p/>
 	 * The default implementation does nothing.
 	 */
+	@Override public void enterHextest(@NotNull NetworkParser2Parser.HextestContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation does nothing.
+	 */
+	@Override public void exitHextest(@NotNull NetworkParser2Parser.HextestContext ctx) { }
+
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation does nothing.
+	 */
 	@Override public void enterEveryRule(@NotNull ParserRuleContext ctx) { }
 	/**
 	 * {@inheritDoc}

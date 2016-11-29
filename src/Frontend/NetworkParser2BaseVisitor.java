@@ -139,4 +139,12 @@ public class NetworkParser2BaseVisitor<T> extends AbstractParseTreeVisitor<T> im
 	 * {@link #visitChildren} on {@code ctx}.
 	 */
 	@Override public T visitTag(@NotNull NetworkParser2Parser.TagContext ctx) { return visitChildren(ctx); }
+
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.
+	 */
+	@Override public T visitHextest(@NotNull NetworkParser2Parser.HextestContext ctx) { return visitChildren(ctx); }
 }
