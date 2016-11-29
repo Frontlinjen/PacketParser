@@ -125,27 +125,31 @@ public class PacketParserIRBuilder extends AbstractParseTreeVisitor<IR> implemen
 		HashMap<String, String> IPAddress = new HashMap<String, String>();
 		HashMap<String, String> MacAddress = new HashMap<String, String>();
 		for (IPv4Packet packet : IPv4Packets){
-			String currentIP = packet.content.senderIP.toString();
-			String currentMac = packet.header.sender.toString();
-			String Mac = IPAddress.get(currentIP);
-			String IP = MacAddress.get(currentMac);
-			System.err.println(currentIP + " " + currentMac + " " + Mac + " " + IP);
-			if(Mac==null)
-			{
-				IPAddress.put(currentMac, currentIP);
+			String[] currentIP = {packet.content.senderIP.toString(), packet.content.recieverIP.toString()};
+			String[] currentMac = {packet.header.sender.toString(), packet.header.reciever.toString()};
+			
+			for (int i = 0; i < currentIP.length; i++) {
+				String Mac = IPAddress.get(currentIP[i]);
+				String IP = MacAddress.get(currentMac[i]);
+				//System.err.println("currentIP " + currentIP[i] + " currentMac: " + currentMac[i] + " MAC: " + Mac + " IP: " + IP);
+				if(Mac==null)
+				{
+					IPAddress.put(currentIP[i], currentMac[i]);
+				}
+				else if(!Mac.equals(currentMac[i]))
+				{
+					System.err.println("IP " + currentIP[i] + " changed from " + Mac + " to " + currentMac[i]);
+				}
+				if(IP==null)
+				{
+					MacAddress.put(currentMac[i], currentIP[i]);
+				}
+				else if(!IP.equals(currentIP[i]))
+				{
+					System.err.println(currentMac[i] + " changed from " + IP + " to " + currentIP[i]);
+				}
 			}
-			else if(!Mac.equals(currentMac))
-			{
-				System.err.println("IP " + currentIP + " changed from " + Mac + " to " + currentMac);
-			}
-			if(IP==null)
-			{
-				MacAddress.put(currentIP, currentMac);
-			}
-			else if(!IP.equals(currentIP))
-			{
-				System.err.println(currentMac + " changed from " + IP + " to " + currentIP);
-			}
+			
 		}
 		return null;
 	}
