@@ -6,4 +6,8 @@ import java.util.List;
 
 public class IR {
 	List<IPv4Packet> packages = new ArrayList<IPv4Packet>();
+	
+	public String toString(){
+		return packages.toString();
+	}
 }

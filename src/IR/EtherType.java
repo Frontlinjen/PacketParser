@@ -16,4 +16,7 @@ public class EtherType  extends IR{
 		this.hd = hd;
 	}
 	
+	public String toString(){
+		return hd.toString();
+	}
 }
