@@ -1,6 +1,10 @@
 package IR;
 
+import java.util.HashMap;
+import java.util.Hashtable;
+import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
 
 import org.antlr.v4.runtime.tree.AbstractParseTreeVisitor;
 import org.antlr.v4.runtime.tree.ErrorNode;
@@ -84,6 +88,7 @@ public class PacketParserIRBuilder extends AbstractParseTreeVisitor<IR> implemen
 	@Override
 	public IR visitFile(FileContext ctx) {
 		List<PacketContext> packages = ctx.packet();
+		List<IPv4Packet> IPv4Packets = null;
 		for (PacketContext packet : packages) {
 			System.out.println("--START PACKAGE--\n");
 			IPv4Packet newPacket = new IPv4Packet();
@@ -95,6 +100,24 @@ public class PacketParserIRBuilder extends AbstractParseTreeVisitor<IR> implemen
 			newPacket.header.contentLength = Integer.parseInt(packet.totalLength.getText());
 			newPacket.content = (Content) visitIpv4content(packet.content);	
 			System.out.println("\n--END PACKAGE--");
+			IPv4Packets.add(newPacket);
+		}
+		HashMap<String, Integer> comb = new HashMap<String, Integer>();
+		for (IPv4Packet packet : IPv4Packets){
+			String key = packet.content.senderIP + "->" + packet.content.recieverIP;
+			Integer result = comb.get(key);
+			if(result == null){
+				comb.put(key, 1);
+			}
+			else{
+				result++;
+			}
+		}
+		Iterator it = comb.entrySet().iterator();
+		while(it.hasNext()){
+			Map.Entry pair = (Map.Entry)it.next();
+			System.out.println(pair.getKey() + ": " + pair.getValue());
+			it.remove();
 		}
 		return null;
 	}
