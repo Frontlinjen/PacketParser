@@ -1,5 +1,7 @@
 package IR;
 
+import java.util.Arrays;
+
 public class MacAddress extends IR {
 
 	private NP2HexaDecimal[] arr = new NP2HexaDecimal[6];
@@ -18,5 +20,9 @@ public class MacAddress extends IR {
 			for(int i=0; i<MacAdd.length; i++){
 				arr[i] = new NP2HexaDecimal(MacAdd[i].toCharArray());
 			}
+	}
+	@Override
+	public String toString() {
+		return "MacAddress [arr=" + Arrays.toString(arr) + "]";
 	}
 }
